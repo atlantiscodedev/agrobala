@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Bala — Restauracja & Sala Bankietowa | Wilczyn</title>
+    <meta name="description"
+        content="Agro Bala — ekskluzywna restauracja i sala bankietowa w Wilczynie. Smak natury w luksusowym wydaniu. Wesela, eventy, kolacje w wyjątkowym klimacie nad jeziorem.">
+    <meta name="keywords"
+        content="restauracja Wilczyn, sala bankietowa, wesela, eventy, Agro Bala, fine dining, catering">
+
+    <meta property="og:title" content="Agro Bala — Restauracja & Sala Bankietowa">
+    <meta property="og:description"
+        content="Smak natury w luksusowym wydaniu. Ekskluzywna restauracja i sala bankietowa w Wilczynie.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+</head>
+
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="navbar-logo"><img src="images/logo.png" alt="Agro Bala Logo"></a>
+            <ul class="navbar-links" id="navLinks">
+                <li><a href="#about">O nas</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#events">Wydarzenia</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#reviews">Opinie</a></li>
+                <li><a href="#location">Lokalizacja</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#contact" class="navbar-cta">Rezerwacja</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero visible" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-tagline">Restauracja & Sala Bankietowa</p>
+            <h1 class="hero-title">Smak <em>natury</em> w luksusowym wydaniu</h1>
+            <p class="hero-desc">Wyjątkowe miejsce otoczone naturą, gdzie tradycja spotyka się z nowoczesną gastronomią.
+                Każde danie to historia opowiedziana smakiem.</p>
+            <a href="#contact" class="hero-btn">Zarezerwuj stolik</a>
+        </div>
+        <div class="hero-scroll">
+            <span>Odkryj</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal-left">
+                    <img src="images/venue.png" alt="Wnętrze restauracji Agro Bala">
+                    <div class="frame"></div>
+                </div>
+                <div class="about-text reveal-right">
+                    <p class="section-label">O nas</p>
+                    <h2 class="section-title">Miejsce, gdzie natura spotyka się z elegancją</h2>
+                    <div class="gold-line"></div>
+                    <p>Agro Bala to więcej niż restauracja — to doświadczenie, które angażuje wszystkie zmysły. Położeni
+                        w sercu natury, w malowniczym Wilczynie, tworzymy przestrzeń, w której czas płynie wolniej, a
+                        każdy posiłek staje się celebracją.</p>
+                    <p>Nasza kuchnia czerpie z lokalnych tradycji i najświeższych składników od sprawdzonych dostawców.
+                        Szef kuchni łączy klasyczne receptury z nowoczesnym podejściem, tworząc dania, które zachwycają
+                        zarówno podniebienie, jak i oko.</p>
+                    <p>Od kameralnych kolacji po wielkie uroczystości — każde wydarzenie traktujemy z taką samą pasją i
+                        dbałością o szczegóły.</p>
+                    <div class="about-stats">
+                        <div>
+                            <div class="about-stat-num">?+</div>
+                            <div class="about-stat-label">Lat doświadczenia</div>
+                        </div>
+                        <div>
+                            <div class="about-stat-num">?+</div>
+                            <div class="about-stat-label">Wesel i eventów</div>
+                        </div>
+                        <div>
+                            <div class="about-stat-num">4.5</div>
+                            <div class="about-stat-label">Ocena Google</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section menu" id="menu">
+        <div class="container">
+            <div class="menu-header reveal">
+                <p class="section-label">Menu</p>
+                <h2 class="section-title">Kulinarna podróż przez smaki</h2>
+                <p class="section-subtitle" style="margin:0 auto">Każde danie to starannie skomponowana opowieść o
+                    świeżości, lokalności i pasji naszego szefa kuchni.</p>
+                <div class="menu-categories">
+                    <button class="menu-cat-btn active" data-cat="all">Wszystkie</button>
+                    <button class="menu-cat-btn" data-cat="przystawki">Przystawki</button>
+                    <button class="menu-cat-btn" data-cat="dania">Dania Główne</button>
+                    <button class="menu-cat-btn" data-cat="desery">Desery</button>
+                </div>
+            </div>
+            <div class="menu-grid reveal" id="menuGrid">
+                <div class="menu-item" data-cat="dania">
+                    <div>
+                        <div class="menu-item-name">Przykładowa Nazwa Dania</div>
+                        <div class="menu-item-desc">Opis dania</div>
+                        <div class="menu-item-tags"><span class="menu-item-tag">Premium</span><span
+                                class="menu-item-tag">Signature</span></div>
+                    </div>
+                    <div class="menu-item-price">00 zł</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section events" id="events">
+        <div class="container">
+            <div class="reveal" style="text-align:center;margin-bottom:20px">
+                <p class="section-label">Wydarzenia</p>
+                <h2 class="section-title">Wyjątkowe chwile zasługują na wyjątkowe miejsce</h2>
+            </div>
+            <div class="events-grid">
+                <div class="event-card reveal">
+                    <img src="images/venue.png" alt="Wesela w Agro Bala">
+                    <div class="event-card-overlay">
+                        <h3 class="event-card-title">Wesela</h3>
+                        <p class="event-card-desc">Spraw, aby Twój najważniejszy dzień był niezapomniany. Elegancka
+                            sala, wyjątkowe menu i obsługa na najwyższym poziomie.</p>
+                    </div>
+                </div>
+                <div class="event-card reveal">
+                    <img src="images/evening.png" alt="Eventy firmowe">
+                    <div class="event-card-overlay">
+                        <h3 class="event-card-title">Eventy firmowe</h3>
+                        <p class="event-card-desc">Konferencje, bankiety i spotkania biznesowe w ekskluzywnej atmosferze
+                            otoczonej naturą.</p>
+                    </div>
+                </div>
+                <div class="event-card reveal">
+                    <img src="images/food1.png" alt="Kolacje prywatne">
+                    <div class="event-card-overlay">
+                        <h3 class="event-card-title">Kolacje prywatne</h3>
+                        <p class="event-card-desc">Kameralne kolacje i uroczystości rodzinne. Tworzymy intymną atmosferę
+                            dopasowaną do Twoich potrzeb.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+        <div class="container">
+            <div class="gallery-header reveal">
+                <p class="section-label">Galeria</p>
+                <h2 class="section-title">Klimat, który trzeba poczuć</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal" data-src="images/hero.png">
+                    <img src="images/hero.png" alt="Wnętrze restauracji" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-src="images/food1.png">
+                    <img src="images/food1.png" alt="Danie gourmet" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-src="images/nature.png">
+                    <img src="images/nature.png" alt="Jezioro o zachodzie" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-src="images/food2.png">
+                    <img src="images/food2.png" alt="Deser premium" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-src="images/evening.png">
+                    <img src="images/evening.png" alt="Wieczorny taras" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-src="images/venue.png">
+                    <img src="images/venue.png" alt="Sala bankietowa" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <img src="" alt="Galeria" id="lightboxImg">
+    </div>
+
+    <section class="section reviews" id="reviews">
+        <div class="container">
+            <div class="reviews-header reveal">
+                <p class="section-label">Opinie</p>
+                <h2 class="section-title">Co mówią nasi goście</h2>
+                <p class="section-subtitle" style="margin:0 auto">Autentyczne opinie naszych gości, które potwierdzają
+                    jakość i wyjątkowość Agro Bala.</p>
+            </div>
+            <div class="reviews-slider reveal">
+                <div class="reviews-track" id="reviewsTrack">
+                    <div class="review-card">
+                        <div class="review-item">
+                            <div class="review-stars">
+                                <span class="review-star">★</span><span class="review-star">★</span><span
+                                    class="review-star">★</span><span class="review-star">★</span><span
+                                    class="review-star">★</span>
+                            </div>
+                            <p class="review-text">Przepiękne, klimatyczne miejsce z przepysznym jedzeniem, z bardzo miłą zawsze uśmiechniętą obsługą. Idealne miejsce na rodzinny niedzielny obiad oraz wieczorne spotkania. Polecam!</p>
+                            <p class="review-author">Aneta Bak</p>
+                            <div class="review-source">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                Google Reviews
+                            </div>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-stars">
+                                <span class="review-star">★</span><span class="review-star">★</span><span
+                                    class="review-star">★</span><span class="review-star">★</span><span
+                                    class="review-star">★</span>
+                            </div>
+                            <p class="review-text">Pojechaliśmy tam ze względu na opinie o tej restauracji, którą jak się okazało zasługuje jak najbardziej na 5 gwiazdek. Miejsce super, jedzenie pyszne i bardzo duże, tak więc trzeba się zastanowić nad wzięciem dwóch dań, bo naprawdę ciężko podołać. Obsługa świetna, po prostu należy tam jechać, zjeść i się zrelaksować. Polecam.</p>
+                            <p class="review-author">Eryk Wojcik</p>
+                            <div class="review-source">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                Google Reviews
+                            </div>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-stars">
+                                <span class="review-star">★</span><span class="review-star">★</span><span
+                                    class="review-star">★</span><span class="review-star">★</span><span
+                                    class="review-star">★</span>
+                            </div>
+                            <p class="review-text">Super miejsce. Bardzo dobre jedzenie i duże porcje za przystępną cenę. Dzieci też tam znajdą dla siebie atrakcje.</p>
+                            <p class="review-author">Kamil Bogucki</p>
+                            <div class="review-source">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                Google Reviews
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-item">
+                            <div class="review-stars">
+                                <span class="review-star">★</span><span class="review-star">★</span><span
+                                    class="review-star">★</span><span class="review-star">★</span><span
+                                    class="review-star">★</span>
+                            </div>
+                            <p class="review-text">Kolejna wizyta i kolejny raz wszystko super!</p>
+                            <p class="review-author">Dawid Łuczak</p>
+                            <div class="review-source">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                Google Reviews
+                            </div>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-stars">
+                                <span class="review-star">★</span><span class="review-star">★</span><span
+                                    class="review-star">★</span><span class="review-star">★</span><span
+                                    class="review-star">★</span>
+                            </div>
+                            <p class="review-text">Świetne miejsce, miła atmosfera, pyszne jedzenie. Można zaprzyjaźnić się z końmi. Dostępny parking. Polecam</p>
+                            <p class="review-author">Edyta Kubaszewska</p>
+                            <div class="review-source">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                Google Reviews
+                            </div>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-stars">
+                                <span class="review-star">★</span><span class="review-star">★</span><span
+                                    class="review-star">★</span><span class="review-star">★</span><span
+                                    class="review-star" style="opacity:0.3">★</span>
+                            </div>
+                            <p class="review-text">Totalne zaskoczenie. Znakomita restauracja pośrodku niczego. Menu często się zmienia, stołowaliśmy się tam kilka dni z rzędu i zawsze było smacznie.</p>
+                            <p class="review-author">Michał Kopaczyk</p>
+                            <div class="review-source">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                Google Reviews
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-dots" id="reviewsDots">
+                <button class="reviews-dot active" data-slide="0"></button>
+                <button class="reviews-dot" data-slide="1"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section location" id="location">
+        <div class="container">
+            <div class="reveal" style="text-align:center;margin-bottom:60px">
+                <p class="section-label">Lokalizacja</p>
+                <h2 class="section-title">Jak do nas trafić</h2>
+            </div>
+            <div class="location-grid">
+                <div class="location-map reveal-left">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2416.5!2d18.0984951!3d52.4785085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4704b1a5e5d994ff%3A0xc9abd97a10e152c4!2sAGRO-BALA!5e0!3m2!1spl!2spl!4v1700000000000!5m2!1spl!2spl"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="location-info reveal-right">
+                    <div class="location-item">
+                        <div class="location-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="location-label">Adres</div>
+                            <div class="location-value">Świętne 17<br>62-550 Świętne</div>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="location-label">Godziny otwarcia</div>
+                            <div class="location-value">Piątek: 15:00 – 21:00<br>Sobota – Niedziela: 12:00 – 21:00</div>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <div class="location-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25m-3.75 0V5.625m0 12.75v-2.874c0-.346.183-.667.476-.865a14.946 14.946 0 003.537-3.6c. 214-.336.26-.73.12-1.1l-.592-1.59a.75.75 0 00-.702-.484H7.36a.75.75 0 00-.702.484l-.593 1.59a.75.75 0 00.12 1.1 14.95 14.95 0 003.538 3.6c.293.198.476.52.476.865v2.874" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="location-label">Dojazd</div>
+                            <div class="location-value">Bezpłatny parking<br>Łatwy dojazd</div>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/maps/place/AGRO-BALA/@52.4785085,18.0984951,17z/data=!3m1!5s0x4704b1a5e68ac25f:0xbde895e91edcc3c4!4m6!3m5!1s0x4704b1a5e5d994ff:0xc9abd97a10e152c4!8m2!3d52.4785085!4d18.0984951!16s%2Fg%2F11cn9n475h"
+                        target="_blank" rel="noopener" class="location-btn">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                        </svg>
+                        Otwórz w Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="reveal" style="text-align:center;margin-bottom:60px">
+                <p class="section-label">Kontakt & Rezerwacja</p>
+                <h2 class="section-title">Zarezerwuj swoje wyjątkowe chwile</h2>
+            </div>
+            <div class="contact-grid">
+                <form class="contact-form reveal-left" id="contactForm"
+                    action="https://formsubmit.co/kontakt@agrobala.pl" method="POST">
+                    <input type="hidden" name="_subject" value="Nowa rezerwacja — Agro Bala">
+                    <input type="hidden" name="_captcha" value="false">
+                    <div class="form-group">
+                        <input type="text" name="name" id="formName" placeholder=" " required>
+                        <label for="formName">Imię i nazwisko</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="formEmail" placeholder=" " required>
+                        <label for="formEmail">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" id="formPhone" placeholder=" ">
+                        <label for="formPhone">Telefon</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="formMsg" placeholder=" " required></textarea>
+                        <label for="formMsg">Wiadomość</label>
+                    </div>
+                    <button type="submit" class="form-submit">Wyślij wiadomość</button>
+                </form>
+                <div class="contact-info reveal-right">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="contact-info-label">Telefon</div>
+                            <div class="contact-info-value"><a href="tel:+48123456789">+48 123 456 789</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="contact-info-label">Email</div>
+                            <div class="contact-info-value"><a href="mailto:kontakt@agrobala.pl">kontakt@agrobala.pl</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="contact-info-label">Adres</div>
+                            <div class="contact-info-value">Świętne 17, 62-550 Świętne</div>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="contact-info-label">Social Media</div>
+                            <div class="contact-info-value"><a href="https://www.facebook.com/AgroBala/" target="_blank"
+                                    rel="noopener">Facebook Agro Bala</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo"><img src="images/logo.png" alt="Agro Bala Logo"></div>
+            <p class="footer-copy">&copy; 2026 Agro Bala. Wszelkie prawa zastrzeżone.</p>
+            <div class="footer-links">
+                <a href="#about">O nas</a>
+                <a href="#menu">Menu</a>
+                <a href="#contact">Kontakt</a>
+                <a href="https://www.facebook.com/AgroBala/" target="_blank" rel="noopener">Facebook</a>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <span style="font-size: 0.85rem; color: #555;">Developed by <a href="https://atlantiscode.dev"
+                    target="_blank" rel="noopener" style="color: #888; text-decoration: none; transition: color 0.3s;"
+                    onmouseover="this.style.color='var(--gold)'"
+                    onmouseout="this.style.color='#888'">AtlantisCode</a></span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
