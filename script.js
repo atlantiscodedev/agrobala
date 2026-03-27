@@ -29,12 +29,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener('click', function (e) {
-            var target = document.querySelector(this.getAttribute('href'));
+            var href = this.getAttribute('href');
+
+            if (href === "#") {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                return;
+            }
+
+            var target = document.querySelector(href);
             if (target) {
                 e.preventDefault();
-                var offset = navbar.offsetHeight + 20;
+                var offset = 100;
                 var top = target.getBoundingClientRect().top + window.scrollY - offset;
                 window.scrollTo({ top: top, behavior: 'smooth' });
+                window.history.pushState(null, null, href);
             }
         });
     });
@@ -136,23 +145,71 @@ document.addEventListener('DOMContentLoaded', function () {
     autoSlide();
 
     var form = document.getElementById('contactForm');
-    form.addEventListener('submit', function (e) {
-        var name = document.getElementById('formName').value.trim();
-        var email = document.getElementById('formEmail').value.trim();
-        var msg = document.getElementById('formMsg').value.trim();
-
-        if (!name || !email || !msg) {
+    if (form) {
+        form.addEventListener('submit', function (e) {
             e.preventDefault();
-            alert('Proszę wypełnić wszystkie wymagane pola.');
-            return;
-        }
 
-        var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRe.test(email)) {
-            e.preventDefault();
-            alert('Proszę podać prawidłowy adres email.');
-        }
-    });
+            var name = document.getElementById('formName').value.trim();
+            var email = document.getElementById('formEmail').value.trim();
+            var msg = document.getElementById('formMsg').value.trim();
+
+            if (!name || !email || !msg) {
+                alert('Proszę wypełnić wszystkie wymagane pola.');
+                return;
+            }
+
+            var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRe.test(email)) {
+                alert('Proszę podać prawidłowy adres email.');
+                return;
+            }
+
+            var submitBtn = form.querySelector('.form-submit');
+            var originalText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Wysyłanie...';
+
+            var formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    if (data.status === 'success') {
+                        alert('Wiadomość została wysłana pomyślnie!');
+                        form.reset();
+                    } else {
+                        alert('Błąd: ' + (data.message || 'Wystąpił nieoczekiwany błąd.'));
+                    }
+                })
+                .catch(function (error) {
+                    console.error('Error:', error);
+                    alert('Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie później.');
+                })
+                .finally(function () {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                });
+        });
+    }
+
+    var urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('mail')) {
+        var status = urlParams.get('mail');
+        if (status === 'success') alert('Wiadomość została wysłana pomyślnie!');
+        else if (status === 'error') alert('Wystąpił błąd podczas wysyłania wiadomości.');
+        else if (status === 'spam') alert('Weryfikacja antyspamowa nie powiodła się.');
+        else if (status === 'empty') alert('Proszę wypełnić wszystkie pola.');
+
+        window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
+    }
 
     menuItems.forEach(function (item, i) {
         item.style.transitionDelay = (i * 0.05) + 's';
